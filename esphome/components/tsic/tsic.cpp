@@ -9,12 +9,12 @@ static const char *const TAG = "tsic";
 
 void TSICComponent::setup() { 
 	ESP_LOGCONFIG(TAG, "Setting up TSIC...");
-	_sensor = TsicSensor::create(12, TsicExternalVCC, TsicType::TSIC_306);
+	_sensor = TsicSensor::create(12, TsicExternalVcc, TsicType::TSIC_306);
 }
 
 void TSICComponent::dump_config() {
   ESP_LOGCONFIG(TAG, "TSIC:");
-  LOG_I2C_DEVICE(this);
+  //LOG_I2C_DEVICE(this);
   if (this->is_failed()) {
     ESP_LOGE(TAG, "Communication with TSIC failed!");
   }
