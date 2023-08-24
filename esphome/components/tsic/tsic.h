@@ -2,13 +2,14 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/sensor/sensor.h"
-#include "esphome/components/i2c/i2c.h"
+#include "TsicSensor/TsicSensor.h"
 
 namespace esphome {
-namespace tmp102 {
+namespace tsic {
 
-class TMP102Component : public PollingComponent, public i2c::I2CDevice, public sensor::Sensor {
+class TSICComponent : public PollingComponent, public sensor::Sensor {
  public:
+  TsicSensor* _sensor;
   /// Setup (reset) the sensor and check connection.
   void setup() override;
   void dump_config() override;
@@ -18,5 +19,5 @@ class TMP102Component : public PollingComponent, public i2c::I2CDevice, public s
   float get_setup_priority() const override;
 };
 
-}  // namespace tmp102
+}  // namespace tsic
 }  // namespace esphome
