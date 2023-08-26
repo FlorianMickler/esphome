@@ -17,8 +17,8 @@ from esphome.const import (
 
 cg.add_library(
     name="TsicSensor",
-    repository="https://github.com/FlorianMickler/TsicSensor",
-    version=None,
+    repository="https://github.com/tripplefox/TsicSensor",
+    version="1.0.0+sha.881a076",
 )
 
 CODEOWNERS = [""]
